@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Outer circle -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#1a7a1a" stroke-width="4"/>
+
+  <!-- Green fields / waves at bottom -->
+  <ellipse cx="50" cy="72" rx="30" ry="8" fill="#2e8b2e" opacity="0.9"/>
+  <ellipse cx="50" cy="76" rx="26" ry="6" fill="#3aaa3a" opacity="0.75"/>
+  <ellipse cx="50" cy="80" rx="22" ry="5" fill="#5cc85c" opacity="0.6"/>
+
+  <!-- Wheat stalk on the right -->
+  <line x1="75" y1="75" x2="75" y2="30" stroke="#e8901a" stroke-width="2"/>
+  <ellipse cx="75" cy="30" rx="4" ry="6" fill="#e8901a" transform="rotate(-15,75,30)"/>
+  <ellipse cx="72" cy="38" rx="3" ry="5" fill="#e8901a" transform="rotate(-25,72,38)"/>
+  <ellipse cx="78" cy="38" rx="3" ry="5" fill="#e8901a" transform="rotate(15,78,38)"/>
+  <ellipse cx="70" cy="46" rx="3" ry="5" fill="#e8901a" transform="rotate(-20,70,46)"/>
+  <ellipse cx="78" cy="46" rx="3" ry="5" fill="#e8901a" transform="rotate(20,78,46)"/>
+
+  <!-- Circuit dots on the left -->
+  <circle cx="22" cy="42" r="2.5" fill="none" stroke="#1a7a1a" stroke-width="1.5"/>
+  <circle cx="22" cy="52" r="2.5" fill="none" stroke="#1a7a1a" stroke-width="1.5"/>
+  <circle cx="22" cy="62" r="2.5" fill="none" stroke="#1a7a1a" stroke-width="1.5"/>
+  <line x1="22" y1="44.5" x2="22" y2="49.5" stroke="#1a7a1a" stroke-width="1.5"/>
+  <line x1="22" y1="54.5" x2="22" y2="59.5" stroke="#1a7a1a" stroke-width="1.5"/>
+  <line x1="24.5" y1="42" x2="32" y2="42" stroke="#1a7a1a" stroke-width="1.5"/>
+  <line x1="24.5" y1="52" x2="32" y2="52" stroke="#1a7a1a" stroke-width="1.5"/>
+
+  <!-- K letter -->
+  <text x="28" y="66" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#1a5c1a">K</text>
+  <!-- 1 letter (orange) -->
+  <text x="57" y="66" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#e8901a">1</text>
+</svg>
