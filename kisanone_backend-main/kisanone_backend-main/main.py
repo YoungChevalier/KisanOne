@@ -1,5 +1,7 @@
 """FastAPI application entry point for KisanOne."""
 
+import os
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, status
@@ -74,17 +76,21 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(title="KisanOne API", lifespan=lifespan)
 
-# CORS — allow the frontend dev server and common origins
+# CORS — allow the frontend dev server and production origins
+_default_origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+]
+_extra = os.getenv("ALLOWED_ORIGINS", "")
+_allowed_origins = _default_origins + [o.strip() for o in _extra.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:8080",
-        "http://127.0.0.1:8080",
-    ],
+    allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
